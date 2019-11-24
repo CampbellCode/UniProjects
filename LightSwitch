@@ -1,0 +1,59 @@
+/*
+ * GccApplication1.cpp
+ *
+ * Created: 3/03/2017 9:41:33 AM
+ * Author : tfj2503
+ */ 
+
+#include <avr/io.h>
+
+void delay(void);
+
+//sdg00001 START
+int main()
+{
+	//sdg00003 DDRC = 0xFF
+	DDRC = 0xFF;
+	//sdg00004 WHILE (1)
+	while(1)
+	{
+		//sdg00005 PORTC = 0x00
+		PORTC = 0x00;
+		//sdg00009 Delay()
+		delay();
+		//sdg00007 PORTC = 0xFF
+		PORTC = 0xFF;
+		//sdg00008 Delay()
+		delay();
+		//sdg00004
+	}
+	//sdg00002 END
+}
+
+//sdg00010 Delay()
+void Function(void)
+{
+	//sdg00012 Loop1 = 10000
+	int Loop1;
+	char Loop2;
+	
+	Loop1 = 10000;
+	//sdg00013 While (Loop1 > 0)
+	while(Loop1 > 0)
+	{
+		//sdg00015 Loop2 = 200
+		Loop2 = 200;
+		//sdg00016 While (Loop2 > 0)
+		while(Loop2 > 0)
+		{
+			//sdg00017 Loop2--
+			Loop2--;
+			//sdg00016
+		}
+		//sdg00018 Loop1--
+		Loop1--;
+		//sdg00013
+	}
+	//sdg00011 END
+}
+
